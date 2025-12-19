@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: wagcp_deploy
     env:
-      IMAGE_NAME: us-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/webacademyci/webacademy:latest
+      IMAGE_NAME: us-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/webacademy/webacademy:latest
 
     steps:
       # Git checkout
