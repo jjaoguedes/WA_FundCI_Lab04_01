@@ -42,8 +42,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: wagcp_deploy
     env:
-      IMAGE_NAME: us-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/webacademy/webacademy:latest
-
+      IMAGE_NAME: gcr.io/${{ secrets.GCP_PROJECT_ID }}/webacademy:latest
     steps:
       # Git checkout
       - name: Checkout
@@ -58,7 +57,7 @@ jobs:
 
       # gcloud configure docker
       - name: Configure Docker
-        run: gcloud auth configure-docker us-west1-docker.pkg.dev --quiet
+        run: gcloud auth configure-docker --quiet
 
       # build image
       - name: Build Docker image
